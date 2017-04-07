@@ -62,6 +62,10 @@
 
 	var _Page2 = _interopRequireDefault(_Page);
 
+	var _Layout = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./pages/components/Layout.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _Layout2 = _interopRequireDefault(_Layout);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function requestHandler(request, response) {
@@ -92,7 +96,10 @@
 	    ));
 	  }
 
-	  response.write(html);
+	  response.write((0, _server.renderToStaticMarkup)(_react2.default.createElement(_Layout2.default, {
+	    title: 'Aplicacion',
+	    content: html
+	  })));
 	  response.end();
 	}
 
