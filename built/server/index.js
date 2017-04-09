@@ -62,7 +62,7 @@
 
 	var _Page2 = _interopRequireDefault(_Page);
 
-	var _Layout = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./pages/components/Layout.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Layout = __webpack_require__(213);
 
 	var _Layout2 = _interopRequireDefault(_Layout);
 
@@ -24452,6 +24452,52 @@
 	  }
 	}
 	exports.default = Error404;
+
+/***/ },
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function Layout(props) {
+	    return _react2.default.createElement(
+	        "html",
+	        null,
+	        _react2.default.createElement(
+	            "head",
+	            null,
+	            _react2.default.createElement("meta", { charSet: "utf-8" }),
+	            _react2.default.createElement(
+	                "title",
+	                null,
+	                props.title
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "body",
+	            null,
+	            _react2.default.createElement("div", {
+	                id: "render-target",
+	                dangerouslySetInnerHTML: {
+	                    __html: props.content
+	                }
+	            }),
+	            _react2.default.createElement("script", { src: "http://localhost:3001/app.js" })
+	        )
+	    );
+	}
+
+	exports.default = Layout;
 
 /***/ }
 /******/ ]);
